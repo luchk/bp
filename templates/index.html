@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="skeleton.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="../static/js/modernizer.js"></script>
+    <link rel="stylesheet" href="../static/css/style-to-top.css">
+    <link rel="stylesheet" href="../static/css/animate.css">
+</head>
+<body>
+<header id="home">
+    <div class="container">
+        <div class="row">
+            <form class="" action="/menux" method="post">
+              <ul class="u-full-width">
+                <!-- <li>
+                    <a class="button button-primary u-full-width animated fadeInLeft" href="index.htnl#home">Спробуй розпізнати</a>
+                </li>
+                <li>
+                    <a class="button button-primary u-full-width animated fadeInLeft" href="training.html">Натринуй власну модель</a>
+                </li>
+                  <li>
+                      <a class="button button-primary u-full-width animated fadeInRight" href="">Як працює</a>
+                  </li>
+                  <li>
+                      <a class="button button-primary u-full-width animated fadeInRight" href="#aboutus">Про нас</a>
+                  </li> -->
+                  <li>
+                    <button class="button button-primary u-full-width" type="submit" value="1" name="menux">Спробуй розпізнати</button>
+                  </li>
+                  <li>
+                    <button class="button button-primary u-full-width" type="submit" value="2" name="menux">Натренуй власну модель</button>
+                  </li>
+                  <li>
+                    <button class="button button-primary u-full-width" type="submit" value="3" name="menux">Як працює</button>
+                  </li>
+                  <li>
+                    <button class="button button-primary u-full-width" type="submit" value="4" name="menux">Про нас</button>
+                  </li>
+              </ul>
+            </form>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <h1 class="center">
+                GeekTeam
+            </h1>
+        </div>
+        <div class="row">
+            <h3 class="center">
+                Розпізнавання рукописних українських букв.
+            </h3>
+            <p class="center">
+                від студентів Львівського Національго Університету Франка
+            </p>
+        </div>
+    </div>
+</header>
+<div class="line"></div>
+<section class="try" id="try">
+    <div class="container">
+        <div class="row">
+            <h3 class="center">
+                Cпробуй!
+            </h3>
+        </div>
+        <div class="row">
+            <div class="one-third column">
+                <form action="/result" method="post" enctype="multipart/form-data">
+                    <input type='file' id="imgInp"  name="img"/>
+                    <select name="letter" id="">
+                        <option value="1">MNIST</option>
+                        <option value="2">UAMIST</option>
+                        <option value="3">fashion mnist</option>
+                    </select>
+                    <input type="submit" class="button button-primary u-full-width" value="submit">
+                    <!--<input type="submit" value="A" name="letter"/>-->
+                    <!--<input type="submit" value="B" name="letter"/>-->
+                    <!--<input type="submit" value="C" name="letter"/>-->
+                    <!--<input type="submit" value="D" name="letter"/>-->
+                    <!--<input type="submit" value="E" name="letter"/>-->
+                    <!--<input type="submit" value="F" name="letter"/>-->
+                    <!--<input type="submit" value="G" name="letter"/>-->
+                    <!--<input type="submit" value="H" name="letter"/>-->
+
+                </form>
+            </div>
+            <div class="one-third column">
+                <img id="blah" src="http://via.placeholder.com/350x150?text=Your+image+here" style="width: 80%; height: auto; margin-left: auto; margin-right: auto" />
+            </div>
+            <div class="one-third column">
+                <h1>
+                    Ви ввели: {{img}}
+                </h1>
+                <h1>
+                  ви вибрали: {{final_text}}
+                </h1>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="how">
+
+</section>
+<!-- <section class="about_us" id="aboutus">
+    <div class="container">
+        <div class="row">
+            <ul >
+                <li>
+                    Хто Ви такі?
+                    <ul>
+                        <li>
+                            Ми є групою студентів з Львівського Національного Університету Франка, факультету Електроніки.
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    Хто саме входить у Вашу команду?
+                    <ul>
+                        <li>Дмитро Каїнський</li>
+                        <li>Валентин Гайтан</li>
+                        <li>Віктор Вдовиченко</li>
+                        <li>Олександр Мацевко</li>
+                        <li>Василь-Тарас Лучка</li>
+                    </ul>
+                </li>
+                <li>
+                    Що ви робите?
+                    <ul>
+                        <li>
+                            Ми пробуємо навчити компютер розпізнавати написані від рики українські букви.
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    Чому? Навіщо?
+                    <ul>
+                        <li>
+                            Розпізнавання рукописного тексту є актуальною проблемою на сьогодні, особливо для нашої мови. Це дасть змогу оптимізувати велику кількість процесів таких як автоматичне зчиування введених у анкети данних, перетворення рукописного тексту у друкований.
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    Чи є у вас плани на майбутнє?
+                    <ul>
+                        <li>
+                            Так. Звісно вони є. Нашою метою є навчити компютер розпізнавати не лише поодинокі букви, а й цілі слова, а у далекій перспективі перетворювати цілі сторіки рукописного  тексту у друкований.
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section> -->
+<footer>
+
+</footer>
+<a href="#home" class="cd-top js-cd-top">Top</a>
+<script src="../static/js/wow.min.js"></script>
+<script>
+    new WOW().init();
+</script>
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>-->
+<script src="../static/js/main.js"></script>
+</body>
+</html>

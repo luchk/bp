@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../static/css/normalize.css">
+    <link rel="stylesheet" href="../static/css/skeleton.css">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="../static/js/modernizer.js"></script>
+    <link rel="stylesheet" href="../static/css/style-to-top.css">
+    <link rel="stylesheet" href="../static/css/animate.css">
+</head>
+<body>
+
+  <header id="home">
+      <div class="container">
+          <div class="row">
+            <form class="" action="/menux" method="post">
+              <ul class="u-full-width">
+                <!-- <li>
+                    <a class="button button-primary u-full-width animated fadeInLeft" href="index.htnl#home">Спробуй розпізнати</a>
+                </li>
+                <li>
+                    <a class="button button-primary u-full-width animated fadeInLeft" href="training.html">Натринуй власну модель</a>
+                </li>
+                  <li>
+                      <a class="button button-primary u-full-width animated fadeInRight" href="">Як працює</a>
+                  </li>
+                  <li>
+                      <a class="button button-primary u-full-width animated fadeInRight" href="#aboutus">Про нас</a>
+                  </li> -->
+                  <li>
+                    <button class="button button-primary u-full-width" type="submit" value="1" name="menux">Спробуй розпізнати</button>
+                  </li>
+                  <li>
+                    <button class="button button-primary u-full-width" type="submit" value="2" name="menux">Натренуй власну модель</button>
+                  </li>
+                  <li>
+                    <button class="button button-primary u-full-width" type="submit" value="3" name="menux">Як працює</button>
+                  </li>
+                  <li>
+                    <button class="button button-primary u-full-width" type="submit" value="4" name="menux">Про нас</button>
+                  </li>
+              </ul>
+            </form>
+          </div>
+      </div>
+  </header>
+
+
+  <section style="margin-top: 3em;">
+    <div class="container">
+      <div class="row">
+          <form action="/trainm" method="post" enctype="multipart/form-data">
+            <div class="one-third column">
+              <p>
+                Виберіть Датасет
+              </p>
+              <select name="pr" id="">
+                  <option value="1">MNIST</option>
+                  <option value="2">UAMIST</option>
+                  <option value="3">fashion mnist</option>
+              </select>
+              <p>
+                Активаційні функції
+              </p>
+              <select name="parametr2" id="">
+                  <option value="1">rule</option>
+                  <option value="2">tanh</option>
+                  <option value="3">linear</option>
+                  <option value="4">sigmoid</option>
+              </select>
+            </div>
+            <div class="one-third column">
+              <p>
+                batch_size (кількість зобрежань які обробляються за раз)
+              </p>
+              <input type="range" min="1" max="1000" step="1" value="128" name="value" id="input_range_1" oninput="fun1()" class="u-full-width">
+              <p id="range1">128</p>
+
+              <hr>
+
+              <p>
+                Епохи
+              </p>
+              <input type="range" min="1" max="12" step="1" value="6" name="value2" id="input_range_2" oninput="fun2()" class="u-full-width">
+              <p id="range2">6</p>
+            </div>
+            <div class="one-third column">
+              {{how}}
+            </div>
+            <div class="row">
+              <input type="submit" class="button button-primary u-full-width" value="submit">
+            </div>
+          </form>
+      </div>
+    </div>
+  </section>
+
+
+</header>
+
+
+  <a href="#home" class="cd-top js-cd-top">Top</a>
+  <script src="../static/js/wow.min.js"></script>
+  <script>
+      new WOW().init();
+  </script>
+  <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>-->
+  <script src="../static/js/main.js"></script>
+</body>
+</html>

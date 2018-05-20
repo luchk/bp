@@ -1,0 +1,83 @@
+/* line 1, style.less */
+.center {
+  text-align: center;
+}
+/* line 4, style.less */
+header {
+  background-color: #a7a7a7;
+}
+/* line 9, style.less */
+header .container h1 {
+  color: whitesmoke;
+  padding-top: 1em;
+}
+/* line 13, style.less */
+header .container h3 {
+  color: whitesmoke;
+  line-height: 2em;
+}
+/* line 17, style.less */
+header .container p {
+  margin-bottom: 3em;
+  line-height: 3em;
+}
+/* line 22, style.less */
+header ul {
+  padding-top: 2em;
+}
+/* line 24, style.less */
+header ul li {
+  list-style: none;
+  display: inline-block;
+  text-align: center;
+  width: 24%;
+}
+/* line 33, style.less */
+.line {
+  height: 1px;
+  background-color: black;
+}
+/* line 38, style.less */
+section.try {
+  margin-top: 4em;
+}
+/* line 43, style.less */
+.aboutme {
+  background-color: #cfd8dc;
+  border-radius: 25px;
+}
+/* line 46, style.less */
+.aboutme h3,
+.aboutme h5 {
+  padding-top: 1em;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+/* line 52, style.less */
+.aboutme p {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+/* line 55, style.less */
+.aboutme p a {
+  padding-right: 1em;
+  padding-left: 1em;
+}
+/* line 58, style.less */
+.aboutme p a i {
+  padding-bottom: 1em;
+}
+/* line 63, style.less */
+.aboutme img {
+  width: 90%;
+  margin-left: 5%;
+  border-radius: 150px;
+  border: 1px solid black;
+}
+@media (max-width: 650px) {
+  /* line 81, style.less */
+  header ul li {
+    width: 100%;
+    text-align: center;
+  }
+}
